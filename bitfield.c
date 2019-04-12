@@ -5,6 +5,9 @@ struct bits {
   unsigned int minutes:6;
   unsigned int seconds:6;
 };
+typedef struct bits bit_t;
+
+bit_t bits;
 
 int main() 
 {
@@ -12,14 +15,15 @@ int main()
 	int minutes = 50;
 	int seconds = 25;
 
-	int bits bit;
-	bit.hours = hours;
-	bit.minutes = minutes;
-	bit.seconds = seconds;
+	bits.hours = hours;
+	bits.minutes = minutes;
+	bits.seconds = seconds;
 
-	printf("%i\n", bit.hours);
-	printf("%i\n", bit.minutes);
-	printf("%i\n", bit.seconds);
+	
+
+	printf("%i\n", sizeof(bits.hours));
+	printf("%i\n", sizeof(bits.minutes));
+	printf("%i\n", sizeof(bits.seconds));
 
 	return 0;
 }
