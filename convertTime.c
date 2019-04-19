@@ -30,7 +30,10 @@ int main()
 	
 	remainingSeconds = remainingSeconds - (minutes*secondsInMinute);
 	seconds = remainingSeconds;
-	
-	printf("%d hour, %d minutes and %d seconds",hours,minutes,seconds);
+
+
+	hours = hours << 12;
+	minutes = minutes << 6;
+	int packed_Time = hours + minutes + seconds;
 	return 0;
 }
